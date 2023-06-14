@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Calculadora de Pressão.</title>
+    
+    <style>
+        body {
+            background-color: yellow;
+        }
+        p {
+            text-align: justify;
+            text-indent: 50px;
+        }
+    </style>
+</head>
+<body  style="text-align: center;">
+    <h1>Calculador de Pressão</h1>
+    <img src="imagens projeto/medico.png" />
+    <img src="imagens projeto/calculadora-menor.png" />
+    <img src="imagens projeto/coração.png" />
+
+
+    <form method="post" action="calc" onsubmit="return validarFormulario()">
+        <input name="n1" type="number" min="0" value="0"/><br />
+        <input name="n2" type="number" min="0" value="0"/><br />
+        <button type="submit">Calcular</button>
+    </form>
+    <br><br/>
+    
+    
+<script>
+    function validarFormulario() {
+        var n1 = document.getElementById('n1').value;
+        var n2 = document.getElementById('n2').value;
+
+        if (n1 === "" || n2 === "" || n1 < 0 || n2 < 0) {
+            alert("Por favor, preencha os valores corretamente.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>
